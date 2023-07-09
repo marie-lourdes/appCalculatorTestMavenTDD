@@ -9,7 +9,9 @@ class CalculatorTest {
 	// Arrange
 	private static Calculator calculator;
 	
-	@BeforeAll // avant l executions des test on instancie UNE seule fois la classe calculator (vs BeforeEach qui executerai la method à chaque test
+	/*cette annotation @BeforeAll designe une methode static, le code est executé avant l executions de tous les test:
+    on instancie UNE seule fois la classe calculator (vs BeforeEach qui executerai la method à chaque test*/
+	@BeforeAll 
 	private static void setUp() { // cette methode est static pour que java execute la methode a partir de la classe CalculatorTest meme avec une espace de nom de la classe et non d'une instance de cette classe
 		calculator = new Calculator();
 	}
